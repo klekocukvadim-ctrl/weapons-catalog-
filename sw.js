@@ -1,4 +1,4 @@
-const CACHE = "weapons-catalog-v3";
+const CACHE = "weapons-catalog-v4";
 const ASSETS = [
   "./",
   "./styles.css",
@@ -21,7 +21,13 @@ const ASSETS = [
   "./images/pkm.jpg",
   "./images/mp5.jpg",
   "./images/fn-mag.jpg",
-  "./images/remington-870.jpg"
+  "./images/remington-870.jpg",
+  "./images/m16a2.jpg",
+  "./images/grot-c16-fb-a2.jpg",
+  "./images/p-64.jpg",
+  "./images/uzi.jpg",
+  "./images/cz-p-10-c.jpg",
+  "./images/cz-bren-2.jpg"
 ];
 
 self.addEventListener("install", (event) => {

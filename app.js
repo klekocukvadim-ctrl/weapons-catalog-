@@ -259,6 +259,7 @@ function renderDetail(weapon) {
         <span>Відкрити статтю у Вікіпедії</span>
       </a>
       ${weapon.source_notes ? `<p class="notes">${escapeHtml(weapon.source_notes)}</p>` : ""}
+      ${weapon.manual_note ? `<p class="notes">${escapeHtml(weapon.manual_note)}</p>` : ""}
     </div>`;
   bindSkeletons(els.sheetBody);
   els.sheetBody.scrollTop = 0;
