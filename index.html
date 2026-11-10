@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e110d">
+  <meta name="description" content="Енциклопедичний каталог відомих зразків стрілецької зброї українською мовою. Лише відкриті довідкові відомості.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Каталог зброї">
+  <title>Каталог стрілецької зброї</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <div class="top-stack">
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">К</div>
+        <div>
+          <p class="eyebrow">Енциклопедичний довідник</p>
+          <h1>Каталог стрілецької зброї</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="search">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <label class="sr-only" for="search">Пошук за назвою</label>
+        <input id="search" type="search" placeholder="Пошук за назвою" autocomplete="off" enterkeyhint="search">
+      </div>
+      <div class="filter-block">
+        <span class="filter-label" id="cat-label">Категорія</span>
+        <div class="chips" id="category-chips" role="group" aria-labelledby="cat-label"></div>
+      </div>
+      <div class="filter-block">
+        <span class="filter-label" id="country-label">Країна</span>
+        <div class="chips" id="country-chips" role="group" aria-labelledby="country-label"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="meta-row"><span id="count">Завантаження…</span></div>
+  <main id="grid" class="grid" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    Довідковий енциклопедичний каталог за відкритими матеріалами Вікіпедії та світлинами Wikimedia Commons.
+    Не містить інструкцій із виготовлення, модифікації чи застосування зброї. Відсутні в джерелах числа позначено як «—».
+  </footer>
+
+  <div id="backdrop" class="backdrop" hidden></div>
+  <section id="sheet" class="sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-panel" id="sheet-panel">
+      <div class="sheet-grab" id="sheet-grab">
+        <div class="handle" aria-hidden="true"></div>
+        <div class="sheet-bar">
+          <button type="button" class="icon-btn" id="back-btn" aria-label="Назад до списку">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="sheet-title" id="sheet-title">Деталі</div>
+          <button type="button" class="icon-btn" id="close-btn" aria-label="Закрити">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="sheet-body" id="sheet-body"></div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
