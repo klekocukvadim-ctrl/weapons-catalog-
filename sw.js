@@ -1,4 +1,4 @@
-const CACHE = "weapons-catalog-v4";
+const CACHE = "weapons-catalog-v5";
 const ASSETS = [
   "./",
   "./styles.css",
@@ -27,7 +27,17 @@ const ASSETS = [
   "./images/p-64.jpg",
   "./images/uzi.jpg",
   "./images/cz-p-10-c.jpg",
-  "./images/cz-bren-2.jpg"
+  "./images/cz-bren-2.jpg",
+  "./images/mosin-sniper.jpg",
+  "./images/ai-aw.png",
+  "./images/ai-awm.jpg",
+  "./images/m24.png",
+  "./images/m110.jpg",
+  "./images/sako-trg-42.jpg",
+  "./images/steyr-ssg-69.jpg",
+  "./images/barrett-mrad.png",
+  "./images/uar-10.jpg",
+  "./images/snipex-alligator.jpg"
 ];
 
 self.addEventListener("install", (event) => {
